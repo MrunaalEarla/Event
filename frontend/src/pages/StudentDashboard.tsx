@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { apiGet, apiPost } from '@/lib/api';
+import { API_BASE } from '@/lib/api';
 import { useToast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -118,7 +119,7 @@ export const StudentDashboard: React.FC = () => {
 
   const handleDownloadCertificate = async (certId: string) => {
     try {
-      window.open(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/certificates/${certId}/download`, '_blank');
+      window.open(`${API_BASE}/api/certificates/${certId}/download`, '_blank');
       toast({
         title: 'Download Started',
         description: 'Your certificate download has started.'

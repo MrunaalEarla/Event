@@ -1,4 +1,9 @@
-export const API_BASE = (import.meta as any)?.env?.VITE_API_URL || 'http://localhost:5000';
+export const API_BASE = (() => {
+  const env = (import.meta as any)?.env || {};
+  return env.REACT_APP_API_URL
+    || env.VITE_API_URL
+    || 'https://event-3-u6cx.onrender.com';
+})();
 
 function authHeaders() {
   const token = localStorage.getItem('auth_token');

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { User } from '@/types';
+import { API_BASE } from '@/lib/api';
 
 interface AuthContextType {
   user: User | null;
@@ -38,8 +39,6 @@ interface AuthProviderProps {
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-
-  const API_BASE = (import.meta as any)?.env?.VITE_API_URL || 'http://localhost:5000';
 
   useEffect(() => {
     const init = async () => {
