@@ -1,0 +1,15 @@
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm ci && npm run build"
+
+[build.environment]
+  VITE_API_URL = "https://event-3-u6cx.onrender.com"
+  REACT_APP_API_URL = "https://event-3-u6cx.onrender.com"
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
