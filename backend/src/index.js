@@ -81,7 +81,10 @@ const corsOptions = {
     }
     return callback(new Error(`CORS blocked: ${origin} not in allowlist`));
   },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
+  optionsSuccessStatus: 204,
 };
 
 app.use(cors(corsOptions));

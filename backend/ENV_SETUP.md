@@ -28,6 +28,14 @@ Comma-separated list of allowed origins:
 ```
 CORS_ORIGINS=http://localhost:5173,http://localhost:3000
 ```
+For production (Netlify, custom domains), include your site origins:
+```
+# Example Netlify site
+CORS_ORIGINS=https://vignanevent.netlify.app
+
+# Multiple origins (Netlify + custom domain)
+CORS_ORIGINS=https://vignanevent.netlify.app,https://your-custom-domain.com
+```
 
 ## Twilio SMS Configuration (Optional)
 Get credentials from https://www.twilio.com/console
