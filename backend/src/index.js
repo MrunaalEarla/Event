@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const morgan = require('morgan');
 const { createAdminUser } = require('./utils/initAdmin');
+const authRoutes = require('./routes/auth');      // if routes folder is inside src
+
 
 // Import routes
 const authRoutes = require('./routes/auth.routes');
