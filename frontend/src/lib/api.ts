@@ -2,7 +2,7 @@ export const API_BASE = (() => {
   const env = (import.meta as any)?.env || {};
   return env.REACT_APP_API_URL
     || env.VITE_API_URL
-    || 'https://event-3-u6cx.onrender.com';
+    || 'https://event-11.onrender.com';
 })();
 
 function authHeaders() {

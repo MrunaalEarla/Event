@@ -4,8 +4,8 @@
   command = "npm ci && npm run build"
 
 [build.environment]
-  VITE_API_URL = "https://event-3-u6cx.onrender.com"
-  REACT_APP_API_URL = "https://event-3-u6cx.onrender.com"
+  VITE_API_URL = "https://event-11.onrender.com"
+  REACT_APP_API_URL = "https://event-11.onrender.com"
   NODE_VERSION = "22"
 
 [[redirects]]
